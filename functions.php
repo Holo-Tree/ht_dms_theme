@@ -6,6 +6,12 @@
  */
 
 /**
+ * Set HT_DMS_THEME constant true
+ *
+ * @since 0.0.1
+ */
+define( 'HT_DMS_THEME', true );
+/**
  * Define version in a constant
  *
  * @since 0.0.1
