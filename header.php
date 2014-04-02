@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package app_starter
+ * @package htdms_theme
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -26,7 +26,7 @@
 				<nav class="tab-bar">
 					<?php
 						/** This filter is documented in inc/foundation.php */
-					if ( apply_filters( 'app_starter_use_off_canvas_left', true ) === true ) :
+					if ( apply_filters( 'htdms_theme_use_off_canvas_left', true ) === true ) :
 					?>
 						<section class="left-small">
 							<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
@@ -41,7 +41,7 @@
 
 					<?php
 						/** This filter is documented in inc/foundation.php */
-					if ( apply_filters( 'app_starter_use_off_canvas_right', true ) === true ) :
+					if ( apply_filters( 'htdms_theme_use_off_canvas_right', true ) === true ) :
 					?>
 						<section class="right-small">
 							<a class="right-off-canvas-toggle menu-icon" ><span></span></a>
@@ -52,6 +52,6 @@
 				</nav>
 			</div><!--.fixed-->
 
-		<?php app_starter_off_canvas(); ?>
+		<?php htdms_theme_off_canvas(); ?>
 			<section class="main-section">
 				<div id="content" class="site-content">

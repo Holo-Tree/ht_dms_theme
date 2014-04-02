@@ -2,10 +2,10 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package app_starter
+ * @package htdms_theme
  */
 ?>
-	<div id="secondary" class="widget-area <?php app_starter_sidebar_class(); ?>" role="complementary">
+	<div id="secondary" class="widget-area <?php htdms_theme_sidebar_class(); ?>" role="complementary">
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
 			<aside id="search" class="widget widget_search">
@@ -13,14 +13,14 @@
 			</aside>
 
 			<aside id="archives" class="widget">
-				<h1 class="widget-title"><?php _e( 'Archives', 'app_starter' ); ?></h1>
+				<h1 class="widget-title"><?php _e( 'Archives', 'htdms_theme' ); ?></h1>
 				<ul>
 					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 				</ul>
 			</aside>
 
 			<aside id="meta" class="widget">
-				<h1 class="widget-title"><?php _e( 'Meta', 'app_starter' ); ?></h1>
+				<h1 class="widget-title"><?php _e( 'Meta', 'htdms_theme' ); ?></h1>
 				<ul>
 					<?php wp_register(); ?>
 					<li><?php wp_loginout(); ?></li>

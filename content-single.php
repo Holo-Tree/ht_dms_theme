@@ -1,6 +1,6 @@
 <?php
 /**
- * @package app_starter
+ * @package htdms_theme
  */
 ?>
 
@@ -9,7 +9,7 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<div class="entry-meta">
-			<?php app_starter_posted_on(); ?>
+			<?php htdms_theme_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -17,7 +17,7 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'app_starter' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'htdms_theme' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -26,25 +26,25 @@
 	<footer class="entry-footer">
 		<?php
 			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'app_starter' ) );
+			$category_list = get_the_category_list( __( ', ', 'htdms_theme' ) );
 
 			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'app_starter' ) );
+			$tag_list = get_the_tag_list( '', __( ', ', 'htdms_theme' ) );
 
-			if ( ! app_starter_categorized_blog() ) {
+			if ( ! htdms_theme_categorized_blog() ) {
 				// This blog only has 1 category so we just need to worry about tags in the meta text
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'app_starter' );
+					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'htdms_theme' );
 				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'app_starter' );
+					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'htdms_theme' );
 				}
 
 			} else {
 				// But this blog has loads of categories so we should probably display them here
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'app_starter' );
+					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'htdms_theme' );
 				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'app_starter' );
+					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'htdms_theme' );
 				}
 
 			} // end check for categories on this blog
@@ -57,6 +57,6 @@
 			);
 		?>
 
-		<?php edit_post_link( __( 'Edit', 'app_starter' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'htdms_theme' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

@@ -2,18 +2,18 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package app_starter
+ * @package htdms_theme
  */
 
 get_header(); ?>
 
-	<section id="primary" class="content-area <?php app_starter_primary_class(); ?>">
-		<main id="main" class="site-main <?php app_starter_main_class(); ?>" role="main">
+	<section id="primary" class="content-area <?php htdms_theme_primary_class(); ?>">
+		<main id="main" class="site-main <?php htdms_theme_main_class(); ?>" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'app_starter' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'htdms_theme' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
@@ -23,7 +23,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php app_starter_paging_nav(); ?>
+			<?php htdms_theme_paging_nav(); ?>
 
 		<?php else : ?>
 
@@ -34,5 +34,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php app_starter_sidebar(); ?>
+<?php htdms_theme_sidebar(); ?>
 <?php get_footer(); ?>

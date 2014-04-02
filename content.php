@@ -1,6 +1,6 @@
 <?php
 /**
- * @package app_starter
+ * @package htdms_theme
  */
 ?>
 
@@ -10,7 +10,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php app_starter_posted_on(); ?>
+			<?php htdms_theme_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -21,10 +21,10 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'app_starter' ) ); ?>
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'htdms_theme' ) ); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'app_starter' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'htdms_theme' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -35,29 +35,29 @@
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php
 				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'app_starter' ) );
-				if ( $categories_list && app_starter_categorized_blog() ) :
+				$categories_list = get_the_category_list( __( ', ', 'htdms_theme' ) );
+				if ( $categories_list && htdms_theme_categorized_blog() ) :
 			?>
 			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'app_starter' ), $categories_list ); ?>
+				<?php printf( __( 'Posted in %1$s', 'htdms_theme' ), $categories_list ); ?>
 			</span>
 			<?php endif; // End if categories ?>
 
 			<?php
 				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'app_starter' ) );
+				$tags_list = get_the_tag_list( '', __( ', ', 'htdms_theme' ) );
 				if ( $tags_list ) :
 			?>
 			<span class="tags-links">
-				<?php printf( __( 'Tagged %1$s', 'app_starter' ), $tags_list ); ?>
+				<?php printf( __( 'Tagged %1$s', 'htdms_theme' ), $tags_list ); ?>
 			</span>
 			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
 
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'app_starter' ), __( '1 Comment', 'app_starter' ), __( '% Comments', 'app_starter' ) ); ?></span>
+		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'htdms_theme' ), __( '1 Comment', 'htdms_theme' ), __( '% Comments', 'htdms_theme' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php edit_post_link( __( 'Edit', 'app_starter' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'htdms_theme' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

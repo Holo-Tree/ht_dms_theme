@@ -8,13 +8,13 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package app_starter
+ * @package htdms_theme
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area <?php app_starter_primary_class(); ?>">
-		<main id="main" class="site-main <?php app_starter_main_class(); ?>" role="main">
+	<div id="primary" class="content-area <?php htdms_theme_primary_class(); ?>">
+		<main id="main" class="site-main <?php htdms_theme_main_class(); ?>" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -31,7 +31,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php app_starter_paging_nav(); ?>
+			<?php htdms_theme_paging_nav(); ?>
 
 		<?php else : ?>
 
@@ -40,7 +40,7 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
-		<?php app_starter_sidebar(); ?>
+		<?php htdms_theme_sidebar(); ?>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

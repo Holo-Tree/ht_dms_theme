@@ -2,29 +2,29 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package app_starter
+ * @package htdms_theme
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area <?php app_starter_primary_class(); ?>">
-		<main id="main" class="site-main <?php app_starter_main_class(); ?>" role="main">
+	<div id="primary" class="content-area <?php htdms_theme_primary_class(); ?>">
+		<main id="main" class="site-main <?php htdms_theme_main_class(); ?>" role="main">
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'app_starter' ); ?></h1>
+					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'htdms_theme' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'app_starter' ); ?></p>
+					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'htdms_theme' ); ?></p>
 
 					<?php get_search_form(); ?>
 
 					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-					<?php if ( app_starter_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+					<?php if ( htdms_theme_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 					<div class="widget widget_categories">
-						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'app_starter' ); ?></h2>
+						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'htdms_theme' ); ?></h2>
 						<ul>
 						<?php
 							wp_list_categories( array(
@@ -41,7 +41,7 @@ get_header(); ?>
 
 					<?php
 					/* translators: %1$s: smiley */
-					$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'app_starter' ), convert_smilies( ':)' ) ) . '</p>';
+					$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'htdms_theme' ), convert_smilies( ':)' ) ) . '</p>';
 					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 					?>
 
@@ -51,7 +51,7 @@ get_header(); ?>
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->
-		<?php app_starter_sidebar(); ?>
+		<?php htdms_theme_sidebar(); ?>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

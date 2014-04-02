@@ -1,8 +1,8 @@
 <?php
 /**
- * app_starter functions and definitions
+ * htdms_theme functions and definitions
  *
- * @package app_starter
+ * @package htdms_theme
  */
 
 /**
@@ -20,7 +20,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( 'app_starter_setup' ) ) :
+if ( ! function_exists( 'htdms_theme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -28,15 +28,15 @@ if ( ! function_exists( 'app_starter_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function app_starter_setup() {
+function htdms_theme_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on app_starter, use a find and replace
-	 * to change 'app_starter' to the name of your theme in all the template files
+	 * If you're building a theme based on htdms_theme, use a find and replace
+	 * to change 'htdms_theme' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'app_starter', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'htdms_theme', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -50,15 +50,15 @@ function app_starter_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'off-canvas-right' => __( 'Right Off Canvas Menu', 'app_starter' ),
-		'off-canvas-left' => __( 'Left Off Canvas Menu', 'app_starter' ),
+		'off-canvas-right' => __( 'Right Off Canvas Menu', 'htdms_theme' ),
+		'off-canvas-left' => __( 'Left Off Canvas Menu', 'htdms_theme' ),
 	) );
 
 	// Enable support for Post Formats.
 	//add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'app_starter_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'htdms_theme_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
@@ -71,15 +71,15 @@ function app_starter_setup() {
 		'gallery',
 	) );
 }
-endif; // app_starter_setup
-add_action( 'after_setup_theme', 'app_starter_setup' );
+endif; // htdms_theme_setup
+add_action( 'after_setup_theme', 'htdms_theme_setup' );
 
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
-function app_starter_widgets_init() {
+function htdms_theme_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'app_starter' ),
+		'name'          => __( 'Sidebar', 'htdms_theme' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -87,7 +87,7 @@ function app_starter_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Off Canvas Left Sidebar', 'app_starter' ),
+		'name'          => __( 'Off Canvas Left Sidebar', 'htdms_theme' ),
 		'id'            => 'offcanvas-left',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -95,7 +95,7 @@ function app_starter_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Off Canvas Right Sidebar', 'app_starter' ),
+		'name'          => __( 'Off Canvas Right Sidebar', 'htdms_theme' ),
 		'id'            => 'offcanvas-right',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -103,29 +103,29 @@ function app_starter_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'app_starter_widgets_init' );
+add_action( 'widgets_init', 'htdms_theme_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function app_starter_scripts() {
-	wp_enqueue_style( 'app_starter-style', get_stylesheet_uri(), array(), APP_STARTER_VERSION );
+function htdms_theme_scripts() {
+	wp_enqueue_style( 'htdms_theme-style', get_stylesheet_uri(), array(), APP_STARTER_VERSION );
 
-	wp_enqueue_script( 'app_starter-navigation', get_template_directory_uri() . '/js/navigation.js', array(), APP_STARTER_VERSION, true );
+	wp_enqueue_script( 'htdms_theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), APP_STARTER_VERSION, true );
 
-	wp_enqueue_script( 'app_starter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), APP_STARTER_VERSION, true );
+	wp_enqueue_script( 'htdms_theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), APP_STARTER_VERSION, true );
 
-	wp_enqueue_script( 'app-starter', get_stylesheet_directory_uri().'/js/app_starter.min.js', array( 'jquery', 'foundation' ), APP_STARTER_VERSION, true );
+	wp_enqueue_script( 'ht-dms-theme', get_stylesheet_directory_uri().'/js/theme-functions.min.js', array( 'jquery', 'foundation' ), APP_STARTER_VERSION, true );
 
 	//data for ajaxing
 	$data = get_stylesheet_directory_uri().'/inc/preloader.gif';
 
-	wp_localize_script( 'app-starter', 'app_starter', $data );
+	wp_localize_script( 'ht-dms-theme', 'htdms_theme', $data );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'app_starter_scripts' );
+add_action( 'wp_enqueue_scripts', 'htdms_theme_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -157,13 +157,13 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/foundation.php';
 
-if ( ! function_exists( 'app_starter_sidebar' ) ) :
+if ( ! function_exists( 'htdms_theme_sidebar' ) ) :
 /**
  * Sidebar function
  *
  * @since 0.0.1
  */
-function app_starter_sidebar( $name = null ) {
+function htdms_theme_sidebar( $name = null ) {
 	/**
 	 * Filter to override which sidebar we are using.
 	 *
@@ -171,13 +171,13 @@ function app_starter_sidebar( $name = null ) {
 	 *
 	 * @since 0.0.1
 	 */
-	$name = apply_filters('app_starter_get_sidebar', $name);
+	$name = apply_filters('htdms_theme_get_sidebar', $name);
 	/**
 	 * Action to prevent sidebar
 	 *
 	 * @since 0.0.1
 	 */
-	if ( ! do_action( 'app_starter_no_sidebar' ) ) {
+	if ( ! do_action( 'htdms_theme_no_sidebar' ) ) {
 		get_sidebar( $name );
 	}
 }

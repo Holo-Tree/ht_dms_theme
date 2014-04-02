@@ -7,13 +7,13 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package app_starter
+ * @package htdms_theme
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area <?php app_starter_primary_class(); ?>">
-		<main id="main" class="site-main <?php app_starter_main_class(); ?>" role="main">
+	<div id="primary" class="content-area <?php htdms_theme_primary_class(); ?>">
+		<main id="main" class="site-main <?php htdms_theme_main_class(); ?>" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -29,7 +29,7 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
-		<?php app_starter_sidebar(); ?>
+		<?php htdms_theme_sidebar(); ?>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

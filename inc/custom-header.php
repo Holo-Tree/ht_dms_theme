@@ -12,37 +12,37 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package app_starter
+ * @package htdms_theme
  */
 
 /**
  * Setup the WordPress core custom header feature.
  *
- * @uses app_starter_header_style()
- * @uses app_starter_admin_header_style()
- * @uses app_starter_admin_header_image()
+ * @uses htdms_theme_header_style()
+ * @uses htdms_theme_admin_header_style()
+ * @uses htdms_theme_admin_header_image()
  */
-function app_starter_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'app_starter_custom_header_args', array(
+function htdms_theme_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'htdms_theme_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'app_starter_header_style',
-		'admin-head-callback'    => 'app_starter_admin_header_style',
-		'admin-preview-callback' => 'app_starter_admin_header_image',
+		'wp-head-callback'       => 'htdms_theme_header_style',
+		'admin-head-callback'    => 'htdms_theme_admin_header_style',
+		'admin-preview-callback' => 'htdms_theme_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'app_starter_custom_header_setup' );
+add_action( 'after_setup_theme', 'htdms_theme_custom_header_setup' );
 
-if ( ! function_exists( 'app_starter_header_style' ) ) :
+if ( ! function_exists( 'htdms_theme_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see app_starter_custom_header_setup().
+ * @see htdms_theme_custom_header_setup().
  */
-function app_starter_header_style() {
+function htdms_theme_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -75,15 +75,15 @@ function app_starter_header_style() {
 	</style>
 	<?php
 }
-endif; // app_starter_header_style
+endif; // htdms_theme_header_style
 
-if ( ! function_exists( 'app_starter_admin_header_style' ) ) :
+if ( ! function_exists( 'htdms_theme_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see app_starter_custom_header_setup().
+ * @see htdms_theme_custom_header_setup().
  */
-function app_starter_admin_header_style() {
+function htdms_theme_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -103,15 +103,15 @@ function app_starter_admin_header_style() {
 	</style>
 <?php
 }
-endif; // app_starter_admin_header_style
+endif; // htdms_theme_admin_header_style
 
-if ( ! function_exists( 'app_starter_admin_header_image' ) ) :
+if ( ! function_exists( 'htdms_theme_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see app_starter_custom_header_setup().
+ * @see htdms_theme_custom_header_setup().
  */
-function app_starter_admin_header_image() {
+function htdms_theme_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -123,4 +123,4 @@ function app_starter_admin_header_image() {
 	</div>
 <?php
 }
-endif; // app_starter_admin_header_image
+endif; // htdms_theme_admin_header_image
