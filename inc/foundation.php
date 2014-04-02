@@ -31,7 +31,7 @@ if ( ! function_exists( 'htdms_theme_main_class' ) ) :
  */
 function htdms_theme_main_class() {
 	$classes = 'large-9 small-12 columns';
-	if ( do_action( 'htdms_theme_no_sidebar' ) ) {
+	if ( apply_filters( 'htdms_theme_no_sidebar', true ) === true ) {
 		$classes = 'large-12 small-12';
 	}
 
@@ -245,7 +245,16 @@ if ( apply_filters( 'htdms_theme_use_off_canvas_left', true ) === true ) {
 		add_action( 'htdms_theme_after_off_canvas_left', 'htdms_theme_off_canvas_widgets_left' );
 		function htdms_theme_off_canvas_widgets_left() {
 			echo '<aside class="offcanvas-widget-area" id="offcanvas-left-widget-area">';
-				dynamic_sidebar( 'offcanvas-left' );
+				$widget_area = 'offcanvas-left';
+				/**
+				 * Override the offcanvas-left widget area.
+				 *
+				 * @param string $widget_area
+				 *
+				 * @since 0.0.1
+				 */
+				$widget_area = apply_filters( 'htdms_theme_offcanvas_left_widget_area', $widget_area );
+				dynamic_sidebar( $widget_area );
 			echo '</aside><!--#offcanvas-left-widget-area-->';
 		}
 	} //endif !function_exists
@@ -263,7 +272,16 @@ if ( apply_filters( 'htdms_theme_use_off_canvas_right', true ) === true ) {
 		add_action( 'htdms_theme_after_off_canvas_right', 'htdms_theme_off_canvas_widgets_right' );
 		function htdms_theme_off_canvas_widgets_right() {
 			echo '<aside class="offcanvas-widget-area" id="offcanvas-right-widget-area">';
-			dynamic_sidebar( 'offcanvas-right' );
+				$widget_area = 'offcanvas-right';
+				/**
+				 * Override the offcanvas-right widget area.
+				 *
+				 * @param string $widget_area
+				 *
+				 * @since 0.0.1
+				 */
+				$widget_area = apply_filters( 'htdms_theme_offcanvas_right_widget_area', $widget_area );
+				dynamic_sidebar( $widget_area );
 			echo '</aside><!--#offcanvas-right-widget-area-->';
 		}
 	} //endif !function_exists

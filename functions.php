@@ -185,7 +185,7 @@ function htdms_theme_sidebar( $name = null ) {
 	 *
 	 * @since 0.0.1
 	 */
-	if ( apply_filters( 'app_starter_no_sidebar', true ) === true ) {
+	if ( apply_filters( 'htdms_theme_no_sidebar', true ) === true ) {
 		get_sidebar( $name );
 	}
 }
