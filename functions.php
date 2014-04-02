@@ -179,11 +179,13 @@ function htdms_theme_sidebar( $name = null ) {
 	 */
 	$name = apply_filters('htdms_theme_get_sidebar', $name);
 	/**
-	 * Action to prevent sidebar
+	 * Filter to prevent sidebar
+	 *
+	 * @param bool
 	 *
 	 * @since 0.0.1
 	 */
-	if ( ! do_action( 'htdms_theme_no_sidebar' ) ) {
+	if ( apply_filters( 'app_starter_no_sidebar', true ) === true ) {
 		get_sidebar( $name );
 	}
 }
