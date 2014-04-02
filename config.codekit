@@ -34,6 +34,22 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
+	"\/content-page.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/content-page.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/content-single.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/content-single.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
 	"\/content.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -127,17 +143,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/ajaxify.js",
-		"outputAbbreviatedPath": "\/js\/min\/ajaxify-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/app_starter.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/app_starter.min.js",
-		"outputAbbreviatedPath": "\/js\/min\/app_starter.min-ck.js",
+		"outputAbbreviatedPath": "\/js\/ajaxify.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -147,7 +153,7 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/customizer.js",
-		"outputAbbreviatedPath": "\/js\/min\/customizer-ck.js",
+		"outputAbbreviatedPath": "\/js\/customizer.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -157,7 +163,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation.min.js",
-		"outputAbbreviatedPath": "\/js\/min\/foundation.min-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation.min.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -167,7 +173,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.abide.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.abide-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.abide.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -177,7 +183,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.accordion.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.accordion-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.accordion.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -187,7 +193,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.alert.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.alert-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.alert.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -197,7 +203,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.clearing.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.clearing-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.clearing.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -207,7 +213,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.dropdown.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.dropdown-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.dropdown.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -217,7 +223,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.equalizer.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.equalizer-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.equalizer.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -227,7 +233,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.interchange.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.interchange-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.interchange.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -237,7 +243,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.joyride.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.joyride-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.joyride.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -247,9 +253,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.js",
-		"outputAbbreviatedPath": "\/js\/foundation.min.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.min.js",
 		"outputPathIsSetByUser": 1,
-		"outputStyle": 2,
+		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/foundation\/foundation.magellan.js": {
@@ -257,7 +263,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.magellan.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.magellan-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.magellan.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -267,7 +273,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.offcanvas.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.offcanvas-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.offcanvas.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -277,7 +283,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.orbit.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.orbit-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.orbit.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -287,7 +293,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.reveal.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.reveal-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.reveal.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -297,7 +303,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.slider.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.slider-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.slider.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -307,7 +313,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.tab.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.tab-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.tab.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -317,7 +323,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.tooltip.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.tooltip-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.tooltip.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -327,7 +333,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/foundation\/foundation.topbar.js",
-		"outputAbbreviatedPath": "\/js\/foundation\/min\/foundation.topbar-ck.js",
+		"outputAbbreviatedPath": "\/js\/foundation\/foundation.topbar.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -337,7 +343,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/history.js",
-		"outputAbbreviatedPath": "\/js\/min\/history-ck.js",
+		"outputAbbreviatedPath": "\/js\/history.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -347,7 +353,7 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/navigation.js",
-		"outputAbbreviatedPath": "\/js\/min\/navigation-ck.js",
+		"outputAbbreviatedPath": "\/js\/navigation.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -357,7 +363,7 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/skip-link-focus-fix.js",
-		"outputAbbreviatedPath": "\/js\/theme-functions.min.js",
+		"outputAbbreviatedPath": "\/js\/skip-link-focus-fix.min.js",
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -367,7 +373,7 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/theme-functions.js",
-		"outputAbbreviatedPath": "\/js\/app_starter.min.js",
+		"outputAbbreviatedPath": "\/js\/theme-functions.min.js",
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
@@ -377,7 +383,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/theme-functions.min.js",
-		"outputAbbreviatedPath": "\/js\/min\/theme-functions.min-ck.js",
+		"outputAbbreviatedPath": "\/js\/theme-functions.min.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1619,10 +1625,10 @@
 	"javascriptAutoOutputPathRelativePath": "\/min",
 	"javascriptAutoOutputPathReplace1": "",
 	"javascriptAutoOutputPathReplace2": "",
-	"javascriptAutoOutputPathStyle": 2,
+	"javascriptAutoOutputPathStyle": 0,
 	"javascriptCreateSourceMap": 1,
 	"javascriptOutputStyle": 1,
-	"javascriptOutputSuffix": "-ck",
+	"javascriptOutputSuffix": ".min",
 	"javascriptSyntaxCheckerStyle": 1,
 	"jsCheckerReservedNamesString": "",
 	"jsHintFlags2": {

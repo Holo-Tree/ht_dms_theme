@@ -10,8 +10,8 @@
  *
  * @since 0.0.1
  */
-if ( !defined( 'APP_STARTER_VERSION' ) ) {
-	define( 'APP_STARTER_VERSION', '0.0.1' );
+if ( !defined( 'HT_DMS_THEME_VERSION' ) ) {
+	define( 'HT_DMS_THEME_VERSION', '0.0.1' );
 }
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -109,13 +109,13 @@ add_action( 'widgets_init', 'htdms_theme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function htdms_theme_scripts() {
-	wp_enqueue_style( 'htdms_theme-style', get_stylesheet_uri(), array(), APP_STARTER_VERSION );
+	wp_enqueue_style( 'htdms_theme-style', get_stylesheet_uri(), array(), HT_DMS_THEME_VERSION );
 
-	wp_enqueue_script( 'htdms_theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), APP_STARTER_VERSION, true );
+	wp_enqueue_script( 'htdms_theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), HT_DMS_THEME_VERSION, true );
 
-	wp_enqueue_script( 'htdms_theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), APP_STARTER_VERSION, true );
+	wp_enqueue_script( 'htdms_theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), HT_DMS_THEME_VERSION, true );
 
-	wp_enqueue_script( 'ht-dms-theme', get_stylesheet_directory_uri().'/js/theme-functions.min.js', array( 'jquery', 'foundation' ), APP_STARTER_VERSION, true );
+	wp_enqueue_script( 'ht-dms-theme', get_stylesheet_directory_uri().'/js/theme-functions.min.js', array( 'jquery', 'foundation' ), HT_DMS_THEME_VERSION, true );
 
 	//data for ajaxing
 	$data = get_stylesheet_directory_uri().'/inc/preloader.gif';
