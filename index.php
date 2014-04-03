@@ -25,6 +25,9 @@ htdms_theme_header(); ?>
 					if ( is_page() ) {
 							$part = 'page';
 					}
+					elseif( is_singular( HT_DMS_GROUP_CPT_NAME ) || is_singular( HT_DMS_DECISION_CPT_NAME )) {
+						$part = 'dms';
+					}
 					elseif ( is_singular() ) {
 						$part = 'single';
 					}

@@ -36,7 +36,18 @@
 					?>
 
 					<section class="middle tab-bar-section">
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<h1 class="site-title">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+							<?php
+								if ( is_singular( HT_DMS_GROUP_CPT_NAME ) || is_singular( HT_DMS_DECISION_CPT_NAME ) ) {
+									global $post;
+									$title = $post->post_title;
+									if ( $title != '' || empty( $ittle ) ) {
+										echo '<span class="post-title-in-header" id="post-title-in-header-'.$post->ID.'">'.$title.'</span>';
+									} //endif there is a title to output
+								} //endif is group/ decision singular
+							?>
+						</h1>
 					</section>
 
 					<?php
