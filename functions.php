@@ -177,7 +177,9 @@ function htdms_theme_sidebar( $name = null ) {
 	 *
 	 * @since 0.0.1
 	 */
-	$name = apply_filters('htdms_theme_get_sidebar', $name);
+	$name = apply_filters( 'htdms_theme_get_sidebar', $name );
+	$view = trailingslashit( HT_DIR ) . 'dms/views/' . $name . '.php';
+
 	/**
 	 * Filter to prevent sidebar
 	 *
@@ -185,8 +187,15 @@ function htdms_theme_sidebar( $name = null ) {
 	 *
 	 * @since 0.0.1
 	 */
-	if ( apply_filters( 'htdms_theme_no_sidebar', false ) === false ) {
-		get_sidebar( $name );
+	if ( apply_filters( 'htdms_theme_no_sidebar', FALSE ) === FALSE ) {
+		if ( file_exists( $view ) ) {
+			include_once( $view );
+		}
+		else {
+
+			get_sidebar( $name );
+		}
 	}
+
 }
 endif;
