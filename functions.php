@@ -89,24 +89,24 @@ function htdms_theme_widgets_init() {
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Off Canvas Left Sidebar', 'htdms_theme' ),
 		'id'            => 'offcanvas-left',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Off Canvas Right Sidebar', 'htdms_theme' ),
 		'id'            => 'offcanvas-right',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
 	) );
 }
 add_action( 'widgets_init', 'htdms_theme_widgets_init' );
@@ -189,7 +189,7 @@ function htdms_theme_sidebar( $name = null ) {
 	 */
 	if ( apply_filters( 'htdms_theme_no_sidebar', FALSE ) === FALSE ) {
 		if ( file_exists( $view ) ) {
-			include_once( $view );
+			pods_view( $view, $expires = DAY_IN_SECONDS, $cache_mode = 'cache' );
 		}
 		else {
 
@@ -198,4 +198,46 @@ function htdms_theme_sidebar( $name = null ) {
 	}
 
 }
+endif;
+
+if ( ! function_exists( 'htdms_theme_header' ) ) :
+	/**
+	 * Header function
+	 *
+	 * @param 	string	$name	Name of header.
+	 *
+	 * @returns	string			The header.
+	 */
+	function htdms_theme_header( $name = null ) {
+		/**
+		 * Override which header is returned;
+		 *
+		 * @param string $name Name of header.
+		 *
+		 * @since 0.0.1
+		 */
+		$name = apply_filters( 'htdms_theme_header', $name );
+		pods_view( get_header( $name ), $expires = DAY_IN_SECONDS, $cache_mode = 'cache' );
+	}
+endif;
+
+if ( ! function_exists( 'htdms_theme_footer' ) ) :
+	/**
+	 * footer function
+	 *
+	 * @param 	string	$name	Name of footer.
+	 *
+	 * @returns	string			The footer.
+	 */
+	function htdms_theme_footer( $name = null ) {
+		/**
+		 * Override which footer is returned;
+		 *
+		 * @param string $name Name of footer.
+		 *
+		 * @since 0.0.1
+		 */
+		$name = apply_filters( 'htdms_theme_footer', $name );
+		pods_view( get_footer( $name ), $expires = DAY_IN_SECONDS, $cache_mode = 'cache' );
+	}
 endif;

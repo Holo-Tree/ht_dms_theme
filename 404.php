@@ -5,7 +5,7 @@
  * @package htdms_theme
  */
 
-get_header(); ?>
+htdms_theme_header(); ?>
 
 	<div id="primary" class="content-area <?php htdms_theme_primary_class(); ?>">
 		<main id="main" class="site-main <?php htdms_theme_main_class(); ?>" role="main">
@@ -54,4 +54,4 @@ get_header(); ?>
 		<?php htdms_theme_sidebar(); ?>
 	</div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php htdms_theme_footer(); ?>
