@@ -27,12 +27,22 @@ jQuery(document).ready(function($) {
         // History.log('statechange:', State.data, State.title, State.url);
         //console.log(event);
         $('#content').fadeTo(200,.3);
+        $("#primary").prepend('<div id="ajax-loader"><img src="'+htdms_theme+'"</div>');
+        $("#ajax-loader").fadeIn();
+
         $("#main").load(State.url + ' #primary, #secondary', function(data) {
             /* After the content loads you can make additional callbacks*/
             $('#content').fadeTo(200,1);
+            $( '#ajax-loader').remove();
             // Updates the menu
             var request = $(data);
             $('#access').replaceWith($('#access', request));
         });
     }
+    $('#access a').live('click', function(e) {
+        e.preventDefault();
+        var path = $(this).attr('href');
+        var title = $(this).text();
+        History.pushState('ajax',title,path);
+    });
 });
