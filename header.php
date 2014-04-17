@@ -38,16 +38,20 @@
 					<section class="middle tab-bar-section">
 						<h1 class="site-title">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-							<?php
-								if ( is_singular( HT_DMS_GROUP_CPT_NAME ) || is_singular( HT_DMS_DECISION_CPT_NAME ) ) {
-									global $post;
-									$title = $post->post_title;
-									if ( $title != '' || empty( $ittle ) ) {
-										echo '<span class="post-title-in-header" id="post-title-in-header-'.$post->ID.'">'.$title.'</span>';
-									} //endif there is a title to output
-								} //endif is group/ decision singular
-							?>
 						</h1>
+						<div class="after-title">
+							<?php
+								/**
+								 * Output content after the title.
+								 *
+								 * To keep additional content in tab bar, make sure it is display:inline. .after-title and h1.site-title should already be via style.scss
+								 *
+								 * @since 0.0.1
+								 */
+								do_action( 'htdms_theme_after_title' );
+							?>
+						</div>
+
 					</section>
 
 					<?php

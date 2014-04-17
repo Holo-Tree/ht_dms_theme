@@ -184,7 +184,7 @@
 		},
 	"\/js\/ajaxify.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/ajaxify.js",
 		"outputAbbreviatedPath": "\/js\/ajaxify.min.js",
@@ -415,7 +415,7 @@
 		},
 	"\/js\/history.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/history.js",
 		"outputAbbreviatedPath": "\/js\/history.min.js",
@@ -1513,6 +1513,15 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/task.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/task.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		}
 	},
 "hooks": [
@@ -1614,20 +1623,6 @@
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/js\/foundation\/foundation.topbar.js",
 			"position": 15,
-			"type": 1
-			}
-		],
-	"\/js\/theme-functions.js": [
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/history.js",
-			"position": 0,
-			"type": 1
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/ajaxify.js",
-			"position": 1,
 			"type": 1
 			}
 		]

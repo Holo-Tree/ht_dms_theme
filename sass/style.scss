@@ -66,3 +66,13 @@ h1.widget-title {
   top: 40%;
   left: 45%;
 }
+
+h1.site-title, .after-title span, .after-title {
+  display: inline;
+}
+
+.after-title span {
+  margin: 0 4px;
+  a {color: white;}
+  a:visited {color:white;}
+}
