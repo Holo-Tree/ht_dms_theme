@@ -178,7 +178,7 @@ function htdms_theme_sidebar( $name = null ) {
 	 * @since 0.0.1
 	 */
 	$name = apply_filters( 'htdms_theme_get_sidebar', $name );
-	$view = trailingslashit( HT_DIR ) . 'dms/views/' . $name . '.php';
+	$view = trailingslashit( HT_DMS_VIEW_DIR ) . $name . '.php';
 
 	/**
 	 * Filter to prevent sidebar
