@@ -6,7 +6,7 @@ if ( ! function_exists( 'htdms_theme_primary_class' ) ) :
  *
  * @since 0.0.1
  */
-function htdms_theme_primary_class() {
+function htdms_theme_primary_class( $return = false ) {
 	$classes = 'row';
 
 	/**
@@ -18,7 +18,12 @@ function htdms_theme_primary_class() {
 	 */
 	$classes = apply_filters( 'htdms_theme_primary_class', $classes );
 
-	echo $classes;
+	if ( $return ) {
+		return $classes;
+	}
+	else {
+		echo $classes;
+	}
 
 }
 endif;
@@ -29,7 +34,7 @@ if ( ! function_exists( 'htdms_theme_main_class' ) ) :
  *
  * @since 0.0.1
  */
-function htdms_theme_main_class() {
+function htdms_theme_main_class( $return = false ) {
 	$classes = 'large-9 small-12 columns';
 	if ( apply_filters( 'htdms_theme_no_sidebar', false ) === true ) {
 		$classes = 'large-12 small-12';
@@ -44,7 +49,12 @@ function htdms_theme_main_class() {
 	 */
 	$classes = apply_filters( 'htdms_theme_main_class', $classes );
 
-	echo $classes;
+	if ( $return ) {
+		return $classes;
+	}
+	else {
+		echo $classes;
+	}
 
 }
 endif;
@@ -55,7 +65,7 @@ if ( ! function_exists( 'htdms_theme_sidebar_class' ) ) :
  *
  * @since 0.0.1
  */
-function htdms_theme_sidebar_class() {
+function htdms_theme_sidebar_class( $return = false ) {
 	$classes = 'large-3 small-12 columns';
 
 	/**
@@ -67,7 +77,12 @@ function htdms_theme_sidebar_class() {
 	 */
 	$classes = apply_filters( 'htdms_theme_sidebar_class', $classes );
 
-	echo $classes;
+	if ( $return ) {
+		return $classes;
+	}
+	else {
+		echo $classes;
+	}
 
 }
 endif;
@@ -78,7 +93,7 @@ if ( ! function_exists( 'htdms_theme_footer_class' ) ) :
  *
  * @since 0.0.1
  */
-function htdms_theme_footer_class() {
+function htdms_theme_footer_class( $return = false ) {
 	$classes = 'row';
 
 	/**
@@ -90,7 +105,13 @@ function htdms_theme_footer_class() {
 	 */
 	$classes = apply_filters( 'htdms_theme_footer_class', $classes );
 
-	echo $classes;
+	if ( $return ) {
+	return $classes;
+	}
+	else {
+		echo $classes;
+	}
+
 }
 endif;
 
@@ -100,7 +121,7 @@ if ( ! function_exists( 'htdms_theme_site_info_class' ) ) :
  *
  * @since 0.0.1
  */
-function htdms_theme_site_info_class() {
+function htdms_theme_site_info_class( $return = false ) {
 	$classes = 'large-12 small-12';
 
 	/**
@@ -112,7 +133,13 @@ function htdms_theme_site_info_class() {
 	 */
 	$classes = apply_filters( 'htdms_theme_site_info_class', $classes );
 
-	echo $classes;
+	if ( $return ) {
+		return $classes;
+	}
+	else {
+		echo $classes;
+	}
+
 }
 endif;
 
