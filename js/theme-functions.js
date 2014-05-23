@@ -1,6 +1,10 @@
 jQuery(document).ready(function($) {
     //init foundation
-    $(document).foundation();
+    $(document).foundation({
+        accordion: {
+            active_class: 'accActive',
+        }
+    });
     
     var adminBar = '#wpadminbar';
     var tabBar = '.tab-bar';
