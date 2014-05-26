@@ -12,9 +12,18 @@
 
 			<footer id="colophon" class="site-footer <?php htdms_theme_footer_class(); ?>" role="contentinfo">
 				<div class="site-info <?php htdms_theme_site_info_class(); ?>">
+					<?php
+						if ( apply_filters( 'ht_dms_theme_defualt_site_info', false  ) ) :
+					?>
 					<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'htdms_theme' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'htdms_theme' ), 'WordPress' ); ?></a>
 					<span class="sep"> | </span>
 					<?php printf( __( 'Theme: %1$s by %2$s.', 'htdms_theme' ), 'App Starter', '<a href="http://JoshPress.net/" rel="designer">Josh Pollock</a>' ); ?>
+					<?php
+						endif;
+						if ( false !== ( $site_info = apply_filters( 'ht_dms_site_info', false ) ) ) {
+							echo $site_info;
+						}
+					?>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		<a class="exit-off-canvas"></a>
