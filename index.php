@@ -22,11 +22,12 @@ htdms_theme_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-					if ( is_page() ) {
-							$part = 'page';
-					}
-					elseif( is_singular( HT_DMS_GROUP_CPT_NAME ) || is_singular( HT_DMS_DECISION_CPT_NAME )) {
+
+					if ( is_singular( HT_DMS_GROUP_CPT_NAME ) || is_singular( HT_DMS_DECISION_CPT_NAME ) || is_tax( HT_DMS_TASK_CT_NAME ) || is_home() || is_front_page() ) {
 						$part = 'dms';
+					}
+					elseif ( is_page() ) {
+						$part = 'page';
 					}
 					elseif ( is_singular() ) {
 						$part = 'single';
