@@ -169,15 +169,23 @@ if ( ! function_exists( 'htdms_theme_off_canvas' ) ) {
 		 */
 		if ( apply_filters( 'htdms_theme_use_off_canvas_left', true ) === true ) :
 
+		?><aside class="left-off-canvas-menu menu"><?php
 			/**
 			 * Use to add content after the left off canvas menu.
 			 *
 			 * @since 0.0.1
 			 */
 			do_action( 'htdms_theme_before_off_canvas_left');
-		?>
-			<aside class="left-off-canvas-menu menu">
-				<?php
+
+			/**
+			 * Use off canvas left menu
+			 *
+			 * @param bool
+			 *
+			 * @since 0.0.1
+			 */
+			if ( apply_filters( 'htdms_theme_use_off_canvas_menu_left', true ) === true ) :
+
 				$defaults = array(
 					'theme_location'  => 'off-canvas-left',
 					'menu'            => '',
@@ -197,6 +205,10 @@ if ( ! function_exists( 'htdms_theme_off_canvas' ) ) {
 					'walker'          => ''
 				);
 				wp_nav_menu( $defaults );
+			?>
+
+		<?php
+			endif;
 
 				/**
 				 * Use to add content after the left off canvas menu.
@@ -204,7 +216,7 @@ if ( ! function_exists( 'htdms_theme_off_canvas' ) ) {
 				 * @since 0.0.1
 				 */
 				do_action( 'htdms_theme_after_off_canvas_left');
-				?>
+		?>
 			</aside><!--/aside.left-off-canvas-menu -->
 		<?php
 			endif;

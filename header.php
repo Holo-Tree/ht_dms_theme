@@ -36,9 +36,11 @@
 					?>
 
 					<section class="middle tab-bar-section">
+						<?php if ( true === apply_filters( 'ht_dms_theme_show_site_title', false ) ) : ?>
 						<h1 class="site-title">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 						</h1>
+						<?php endif; ?>
 						<div class="after-title">
 							<?php
 								/**
