@@ -12,7 +12,6 @@
  */
 
 htdms_theme_header(); ?>
-
 	<div id="primary" class="content-area <?php htdms_theme_primary_class(); ?>">
 		<main id="main" class="site-main <?php htdms_theme_main_class(); ?>" role="main">
 
@@ -35,6 +34,9 @@ htdms_theme_header(); ?>
 					else {
 						$part = null;
 					}
+				if ( HT_DEV_MODE ) {
+					var_dump( 'part -- '.$part );
+				}
 					get_template_part( 'content', $part );
 				?>
 
